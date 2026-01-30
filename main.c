@@ -114,6 +114,9 @@ int main(){
     int passed_tests = 0;
     int total_tests = 4;
 
+    //=============TESTS=======================================================
+
+    // Test 1: List with no duplicates
     int arr1[] = {1, 2, 3, 1, 4};
     Node *list1 = create_list(arr1, 5);
     Node *expected_list1 = create_list(arr1, 5);
@@ -121,6 +124,7 @@ int main(){
     free_list(list1);
     free_list(expected_list1);
 
+    // Test 2: List with multiple duplicate sequences
     int arr2[] = {1, 2, 2, 2, 8, 4, 4, 4, 4};
     Node *list2 = create_list(arr2, 9);
     int expected_arr2[] = {1, 2, 8, 4};
@@ -129,6 +133,7 @@ int main(){
     free_list(list2);
     free_list(expected_list2);
 
+    // Test 3: List with all identical elements
     int arr3[] = {1, 1, 1, 1, 1};
     Node *list3 = create_list(arr3, 5);
     int expected_arr3[] = {1};
@@ -137,6 +142,7 @@ int main(){
     free_list(list3);
     free_list(expected_list3);
 
+    // Test 4: Single element list
     int arr4[] = {2};
     Node *list4 = create_list(arr4, 1);
     Node *expected_list4 = create_list(arr4, 1);
