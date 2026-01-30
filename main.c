@@ -64,20 +64,6 @@ Node *remove_duplicates(Node *list) {
     return list;
 }
 
-Node *reverse_list(Node *list){
-
-    Node *pointer = NULL;
-    Node *node = list;
-    while(node != NULL){
-        Node *next = node->pointer;
-        node->pointer = pointer;
-        pointer = node;
-        node = next;
-    }
-
-    return pointer;
-}
-
 bool equal_lists(Node *list1, Node *list2) {
     Node *curr1 = list1;
     Node *curr2 = list2;
